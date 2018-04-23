@@ -1,0 +1,142 @@
+@import 'variables';
+
+body{
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    .navBar{
+        color: $font-color;
+        background: $nav-back;
+        display: flex;
+        width: 100%;
+        height: 65px;
+        .navBar-brand
+        {
+            padding: 0 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex: 3;
+            height: 100%;
+        }
+        .navBar-center
+        {
+            padding: 0 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex: 5;
+            height: 100%;
+            ul{
+                display: flex;
+                list-style: none;
+                li{
+                    margin-right: 20px;
+                    font-weight: 300;
+                }
+            }
+        }
+        .navBar-Right
+        {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            flex: 2;
+            height: 100%;
+            img
+            {
+                margin-right: 17px;
+            }
+            .language{
+                margin: 0;
+            }
+            form{
+                select{
+                    background: transparent;
+                    border: none;
+                    color: $font-color;
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 1.2em;
+                    margin-right: 20px;
+
+                }
+            }
+        }
+    }
+    .description{
+        background: $header-back;
+        display: flex;
+        justify-content: space-between;
+        h2{
+            margin-left: 170px;
+            color: $font-color;
+            font-size: 1.5em;
+            font-weight: 300;
+        }
+        button{
+            border: none;
+            background: $item-background;
+            color: $font-color;
+            margin: 15px 170px 15px 0;
+            font-size: 1.2em;
+            font-weight: 300;
+            height: 40px;
+            border-radius: 10px;
+            &:hover{
+                opacity: .5;
+            }
+        }
+    }
+    .container{
+        background: $container-background;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding-bottom: 30px;
+        .item{
+            margin: 30px 25px 0 0;
+            background: $item-background;
+            border-radius: 10px;
+            width: 200px;
+            height: 131px;
+            &:nth-child(5n+1){
+                margin-left: 170px;
+            }
+            h2{
+                font-size: 1em;
+                font-weight: 300;
+                color: $font-color;
+                margin: 0;
+                text-align: center;
+                line-height: 131px;
+            }            
+
+        }
+    }
+    footer{
+        background: $footer-back;
+        display: flex;
+        padding: 20px 0 0 20px;
+        h2{
+            font-size: 1.2em;
+            font-weight: 300;
+            color: $font-color;
+        }
+        .social{
+            display: flex;
+            flex: 1;
+            justify-content: flex-end;
+            align-items: center;
+            img{
+                width: 30px;
+                height: 30px;
+                margin-right: 20px;
+            }
+        }
+        .logo{
+            width: 50px;
+            margin-right: 30px;
+        }
+    }
+}
+@import 'mediaqueries';
